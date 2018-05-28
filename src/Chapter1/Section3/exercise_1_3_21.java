@@ -96,7 +96,6 @@ public class exercise_1_3_21<Item> implements Iterable<Item> {
     // HERE I IMPLEMENT THE SOLUTION TO EXERCISE 1.3.21
     // The find() method here takes the linked list and key as arguments
     public boolean find(exercise_1_3_21<String> linkedList, String key){
-        boolean result = false;
         Node current;
         if(linkedList.isEmpty()){
             return false;
@@ -104,12 +103,11 @@ public class exercise_1_3_21<Item> implements Iterable<Item> {
             // traverse through the linked list items
             for(current = first; current.next != null; current = current.next){
                 if(current.item.equals(key)){
-                    result = true;
-                    break;
+                    return true;
                 }
             }
         }
-        return result;
+        return false;
     }
 
     public Iterator<Item> iterator() {

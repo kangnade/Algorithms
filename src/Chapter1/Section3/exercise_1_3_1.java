@@ -2,6 +2,10 @@ package Chapter1.Section3;
 
 // this is a replicate of the FixedCapacityStrings class
 
+/**
+ * Written by Nade Kang
+ */
+
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 

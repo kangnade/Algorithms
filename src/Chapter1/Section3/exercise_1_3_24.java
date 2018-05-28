@@ -5,9 +5,9 @@ package Chapter1.Section3;
  */
 
 import java.util.*;
-import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.*;
 
-public class exercise_1_3_20<Item> implements Iterable<Item> {
+public class exercise_1_3_24<Item> implements Iterable<Item> {
     private Node first;
     private Node last;
     private int n;
@@ -48,7 +48,6 @@ public class exercise_1_3_20<Item> implements Iterable<Item> {
         return item;
     }
 
-    // removeLastNode2() method, used for the main class client
     public void removeLastNode2(){
         if(!isEmpty()){
             if(n == 1){
@@ -97,6 +96,51 @@ public class exercise_1_3_20<Item> implements Iterable<Item> {
         }
     }
 
+    // HERE I IMPLEMENT THE SOLUTION TO EXERCISE 1.3.21
+    // The find() method here takes the linked list and key as arguments
+    public boolean find(exercise_1_3_21<String> linkedList, String key){
+        Node current;
+        if(linkedList.isEmpty()){
+            return false;
+        }else{
+            // traverse through the linked list items
+            for(current = first; current.next != null; current = current.next){
+                if(current.item.equals(key)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    // SOLUTION TO EXERCISE 1.3.24
+    // Implement the removeAfter() method that takes a linked list Node as
+    // argument and removes the Node after the given one; does nothing if
+    // the argument or the field next to the argument is null
+    public void removeAfter(Node input){
+        Node current;
+        if(input == null || isEmpty()){
+            // do nothing
+        }else{
+            // traverse through the linked list
+            for(current=first; current.next != null; current = current.next){
+                if(current.item.equals(input.item) && current.next != null){
+                    current.next = current.next.next;
+                    break;
+                }
+            }
+        }
+    }
+
+    // To test 1.3.24 removeAfter() method, we need a method to generate
+    // Node input, this initNode returns a Node result with its item variable
+    // assigned to the argument item value
+    public Node initNode(Item item){
+        Node result = new Node();
+        result.item = item;
+        return result;
+    }
+
     public Iterator<Item> iterator() {
         return new exerciseIterator();
     }
@@ -119,45 +163,32 @@ public class exercise_1_3_20<Item> implements Iterable<Item> {
         }
     }
 
+    // Main class as client to test the removeAfter() method
     public static void main(String[] args){
-        exercise_1_3_20<Integer> testList = new exercise_1_3_20<>();
+        exercise_1_3_24<Integer> testList = new exercise_1_3_24<>();
         testList.insert(0);
         testList.insert(1);
         testList.insert(2);
         testList.insert(3);
+        testList.insert(4);
 
-        StdOut.println("The linked list before we remove the last node: ");
-
-        StringJoiner listBeforeDelete = new StringJoiner(" ");
-        for (int number : testList) {
-            listBeforeDelete.add(String.valueOf(number));
+        StdOut.println("The original linked list looks like: ");
+        StringJoiner originalList = new StringJoiner(" ");
+        for(int i : testList){
+            originalList.add(String.valueOf(i));
         }
+        StdOut.println(originalList.toString());
+        StdOut.println("Expected: 0 1 2 3 4");
 
-        StdOut.println(listBeforeDelete.toString());
-        StdOut.println("Expected: 0 1 2 3");
-
-        testList.delete(6); // here we enter a k > size
-
-        StdOut.println("The linked list after we remove the 6th node, which doesn't exist: ");
-
-        StringJoiner listAfterRemove1 = new StringJoiner(" ");
-        for (int number : testList) {
-            listAfterRemove1.add(String.valueOf(number));
+        exercise_1_3_24<Integer>.Node removed = testList.initNode(1);
+        StdOut.println("The result if we remove the Node next to Node with item 1: ");
+        testList.removeAfter(removed);
+        StringJoiner afterRemoved = new StringJoiner(" ");
+        for(int i : testList){
+            afterRemoved.add(String.valueOf(i));
         }
+        StdOut.println(afterRemoved.toString() + "Expected Result: 0 1 3 4");
 
-        StdOut.println(listAfterRemove1.toString());
-        StdOut.println("Expected: 0 1 2 3");
 
-        testList.delete(3);
-        StdOut.println("The linked list after we remove the 3rd node: ");
-
-        StringJoiner listAfterRemove2 = new StringJoiner(" ");
-        for (int number : testList) {
-            listAfterRemove2.add(String.valueOf(number));
-        }
-
-        StdOut.println(listAfterRemove2.toString());
-        StdOut.println("Expected: 0 1 3");
     }
-
 }

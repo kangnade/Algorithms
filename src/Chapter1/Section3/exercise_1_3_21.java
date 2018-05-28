@@ -3,6 +3,10 @@ package Chapter1.Section3;
 import java.util.*;
 import edu.princeton.cs.algs4.StdOut;
 
+/**
+ * Written by Nade Kang
+ */
+
 public class exercise_1_3_21<Item> implements Iterable<Item> {
     private Node first;
     private Node last;

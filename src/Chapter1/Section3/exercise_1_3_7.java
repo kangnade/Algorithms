@@ -1,5 +1,9 @@
 package Chapter1.Section3;
 
+/**
+ * Written by Nade Kang
+ */
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import edu.princeton.cs.algs4.*;

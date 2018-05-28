@@ -1,5 +1,9 @@
 package Chapter1.Section3;
 
+/**
+ * Written by Nade Kang
+ */
+
 import edu.princeton.cs.algs4.*;
 
 public class exercise_1_3_4 {

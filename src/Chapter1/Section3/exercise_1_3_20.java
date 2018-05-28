@@ -134,7 +134,7 @@ public class exercise_1_3_20<Item> implements Iterable<Item> {
 
         testList.delete(6); // here we enter a k > size
 
-        StdOut.println("\nAfter removing the 6th node, which doesn't exist");
+        StdOut.println("After removing the 6th node, which doesn't exist");
 
         StringJoiner listAfterRemove1 = new StringJoiner(" ");
         for (int number : testList) {
@@ -145,7 +145,7 @@ public class exercise_1_3_20<Item> implements Iterable<Item> {
         StdOut.println("Expected: 0 1 2 3");
 
         testList.delete(3);
-        StdOut.println("\nAfter removing the 3rd node");
+        StdOut.println("After removing the 3rd node");
 
         StringJoiner listAfterRemove2 = new StringJoiner(" ");
         for (int number : testList) {

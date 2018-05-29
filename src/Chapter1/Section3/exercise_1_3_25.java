@@ -7,7 +7,7 @@ package Chapter1.Section3;
 import java.util.*;
 import edu.princeton.cs.algs4.*;
 
-public class exercise_1_3_24<Item> implements Iterable<Item> {
+public class exercise_1_3_25<Item> implements Iterable<Item> {
     private Node first;
     private Node last;
     private int n;
@@ -141,6 +141,26 @@ public class exercise_1_3_24<Item> implements Iterable<Item> {
         return result;
     }
 
+    // Implement the solution to exercise 1.3.25
+    // takes 2 arguments and insert the second after the first
+    // does nothing if either is null
+    public void insertAfter(Node firstInput, Node secondInput){
+        Node current;
+        // check if the linked list is empty or either of the nodes is null
+        if(isEmpty() || firstInput == null || secondInput == null){
+            // does nothing
+        }else{
+            // first traverse through the linked list to look for Node first
+            for(current = first; current.next != null; current = current.next){
+                if(current.item.equals(firstInput.item)){
+                    // using the code given in the textbook exercise 1.3.22
+                    secondInput.next = current.next;
+                    current.next = secondInput;
+                }
+            }
+        }
+    }
+
     public Iterator<Item> iterator() {
         return new exerciseIterator();
     }
@@ -163,9 +183,9 @@ public class exercise_1_3_24<Item> implements Iterable<Item> {
         }
     }
 
-    // Main class as client to test the removeAfter() method
+    // Main class as client to test insertAfter() method in exercise 1.3.25
     public static void main(String[] args){
-        exercise_1_3_24<Integer> testList = new exercise_1_3_24<>();
+        exercise_1_3_25<Integer> testList = new exercise_1_3_25<>();
         testList.insert(0);
         testList.insert(1);
         testList.insert(2);
@@ -180,13 +200,14 @@ public class exercise_1_3_24<Item> implements Iterable<Item> {
         StdOut.println(originalList.toString());
         StdOut.println("Expected: 0 1 2 3 4");
 
-        exercise_1_3_24<Integer>.Node removed = testList.initNode(1);
+        exercise_1_3_25<Integer>.Node first = testList.initNode(3);
+        exercise_1_3_25<Integer>.Node second = testList.initNode(5);
         StdOut.println("The result if we remove the Node next to Node with item 1: ");
-        testList.removeAfter(removed);
-        StringJoiner afterRemoved = new StringJoiner(" ");
+        testList.insertAfter(first, second);
+        StringJoiner afterInserted = new StringJoiner(" ");
         for(int i : testList){
-            afterRemoved.add(String.valueOf(i));
+            afterInserted.add(String.valueOf(i));
         }
-        StdOut.println(afterRemoved.toString() + "Expected Result: 0 1 3 4");
+        StdOut.println(afterInserted.toString() + " Expected Result: 0 1 2 3 5 4");
     }
 }

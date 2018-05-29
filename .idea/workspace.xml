@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ae82bf1-fa3a-4e7b-ba6a-aaf5621f0a86" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_24.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_25.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_1.java" afterPath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_12.java" afterPath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_12.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_14_v1.java" afterPath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_14_v1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_14_v2.java" afterPath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_14_v2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_15.java" afterPath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_15.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_19.java" afterPath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_19.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_20.java" afterPath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_20.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_21.java" afterPath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_21.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_4.java" afterPath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_4.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_7.java" afterPath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_7.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_24.java" afterPath="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_24.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,16 +16,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="exercise_1_3_4.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_4.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="exercise_1_3_7.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_7.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,11 +108,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exercise_1_3_24.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="exercise_1_3_24.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_24.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1024">
-              <caret line="189" column="70" lean-forward="false" selection-start-line="189" selection-start-column="70" selection-end-line="189" selection-end-column="70" />
+            <state relative-caret-position="744">
+              <caret line="189" column="77" lean-forward="true" selection-start-line="189" selection-start-column="77" selection-end-line="189" selection-end-column="77" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exercise_1_3_25.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_25.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2704">
+              <caret line="208" column="49" lean-forward="true" selection-start-line="208" selection-start-column="49" selection-end-line="208" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,6 +176,7 @@
         <option value="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_21.java" />
         <option value="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_20.java" />
         <option value="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_24.java" />
+        <option value="$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_25.java" />
       </list>
     </option>
   </component>
@@ -263,7 +257,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.exercise_1_3_24">
+  <component name="RunManager" selected="Application.exercise_1_3_25">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -345,25 +339,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="exercise_1_3_14_v2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Chapter1.Section3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="Chapter1.Section3.exercise_1_3_14_v2" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Algorithms Sedgewick" />
-      <envs />
-    </configuration>
     <configuration name="exercise_1_3_19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -440,20 +415,39 @@
       <module name="Algorithms Sedgewick" />
       <envs />
     </configuration>
+    <configuration name="exercise_1_3_25" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Chapter1.Section3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Chapter1.Section3.exercise_1_3_25" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Algorithms Sedgewick" />
+      <envs />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.exercise_1_3_14_v2" />
-      <item index="1" class="java.lang.String" itemvalue="Application.exercise_1_3_19" />
-      <item index="2" class="java.lang.String" itemvalue="Application.exercise_1_3_20" />
-      <item index="3" class="java.lang.String" itemvalue="Application.exercise_1_3_21" />
-      <item index="4" class="java.lang.String" itemvalue="Application.exercise_1_3_24" />
+      <item index="0" class="java.lang.String" itemvalue="Application.exercise_1_3_19" />
+      <item index="1" class="java.lang.String" itemvalue="Application.exercise_1_3_20" />
+      <item index="2" class="java.lang.String" itemvalue="Application.exercise_1_3_21" />
+      <item index="3" class="java.lang.String" itemvalue="Application.exercise_1_3_24" />
+      <item index="4" class="java.lang.String" itemvalue="Application.exercise_1_3_25" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.exercise_1_3_24" />
-        <item index="1" class="java.lang.String" itemvalue="Application.exercise_1_3_21" />
-        <item index="2" class="java.lang.String" itemvalue="Application.exercise_1_3_20" />
-        <item index="3" class="java.lang.String" itemvalue="Application.exercise_1_3_19" />
-        <item index="4" class="java.lang.String" itemvalue="Application.exercise_1_3_14_v2" />
+        <item index="0" class="java.lang.String" itemvalue="Application.exercise_1_3_25" />
+        <item index="1" class="java.lang.String" itemvalue="Application.exercise_1_3_24" />
+        <item index="2" class="java.lang.String" itemvalue="Application.exercise_1_3_21" />
+        <item index="3" class="java.lang.String" itemvalue="Application.exercise_1_3_20" />
+        <item index="4" class="java.lang.String" itemvalue="Application.exercise_1_3_19" />
       </list>
     </recent_temporary>
   </component>
@@ -567,13 +561,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Chapter1/Section2/exercise_1_2_14.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="66" column="42" lean-forward="false" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Chapter1/Section2/exercise_1_2_18.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -928,8 +915,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_24.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1024">
-          <caret line="189" column="70" lean-forward="false" selection-start-line="189" selection-start-column="70" selection-end-line="189" selection-end-column="70" />
+        <state relative-caret-position="744">
+          <caret line="189" column="77" lean-forward="true" selection-start-line="189" selection-start-column="77" selection-end-line="189" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Chapter1/Section3/exercise_1_3_25.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2704">
+          <caret line="208" column="49" lean-forward="true" selection-start-line="208" selection-start-column="49" selection-end-line="208" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -9,7 +9,7 @@ import java.util.NoSuchElementException;
  * Written by Nade Kang
  */
 
-public class DoubleNode<Item> implements Iterable<Item> {
+public class DoubleNode<Item>{
     // The implementation of exercise 1.3.31 DoubleNode
     // The design of a doubly linked list
     private Node pre;
@@ -70,6 +70,7 @@ public class DoubleNode<Item> implements Iterable<Item> {
         if(isEmpty()){
             post = pre;
         }
+        n++;
     }
 
     /**
@@ -93,6 +94,7 @@ public class DoubleNode<Item> implements Iterable<Item> {
         if(isEmpty()){
             pre = post;
         }
+        n++;
     }
 
     /**
@@ -118,6 +120,7 @@ public class DoubleNode<Item> implements Iterable<Item> {
             // here the prev_Node.next has already become the newNode.next
             newNode.next.prev = newNode;
         }
+        n++;
     }
 
     /**
@@ -140,6 +143,7 @@ public class DoubleNode<Item> implements Iterable<Item> {
         if(newNode.prev != null){
             newNode.prev.next = newNode;
         }
+        n++;
     }
 
     /**
@@ -150,6 +154,7 @@ public class DoubleNode<Item> implements Iterable<Item> {
         Item temp = pre.item;
         pre = pre.next;
         pre.prev = null;
+        n--;
         return temp;
     }
 
@@ -161,6 +166,7 @@ public class DoubleNode<Item> implements Iterable<Item> {
         Item temp = post.item;
         post = post.prev;
         post.next = null;
+        n--;
         return temp;
     }
 
@@ -172,6 +178,7 @@ public class DoubleNode<Item> implements Iterable<Item> {
         }
         if(size()==1 || size()==2){
             pre = pre.next;
+            n--;
         }
         for(current = pre; pre.next != null; pre = pre.next){
             if(pre.item.equals(delNode.item)){
@@ -180,6 +187,7 @@ public class DoubleNode<Item> implements Iterable<Item> {
                 }if(current.prev != null){
                     current.prev.next = current.next;
                 }
+                n--;
             }
         }
     }
@@ -189,77 +197,6 @@ public class DoubleNode<Item> implements Iterable<Item> {
         while (node != null){
             StdOut.print(node.item + " ");
             node = node.next;
-        }
-    }
-
-    // Use Professor Sedgewick's Iterator for this exercise
-    public ListIterator<Item> iterator()  { return new DoublyLinkedListIterator(); }
-
-    // assumes no calls to DoublyLinkedList.add() during iteration
-    private class DoublyLinkedListIterator implements ListIterator<Item> {
-        private Node current      = pre.next;  // the node that is returned by next()
-        private Node lastAccessed = null;      // the last node to be returned by prev() or next()
-        // reset to null upon intervening remove() or add()
-        private int index = 0;
-
-        public boolean hasNext()      { return index < n; }
-        public boolean hasPrevious()  { return index > 0; }
-        public int previousIndex()    { return index - 1; }
-        public int nextIndex()        { return index;     }
-
-        public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
-            lastAccessed = current;
-            Item item = current.item;
-            current = current.next;
-            index++;
-            return item;
-        }
-
-        public Item previous() {
-            if (!hasPrevious()) throw new NoSuchElementException();
-            current = current.prev;
-            index--;
-            lastAccessed = current;
-            return current.item;
-        }
-
-        // replace the item of the element that was last accessed by next() or previous()
-        // condition: no calls to remove() or add() after last call to next() or previous()
-        public void set(Item item) {
-            if (lastAccessed == null) throw new IllegalStateException();
-            lastAccessed.item = item;
-        }
-
-        // remove the element that was last accessed by next() or previous()
-        // condition: no calls to remove() or add() after last call to next() or previous()
-        public void remove() {
-            if (lastAccessed == null) throw new IllegalStateException();
-            Node x = lastAccessed.prev;
-            Node y = lastAccessed.next;
-            x.next = y;
-            y.prev = x;
-            n--;
-            if (current == lastAccessed)
-                current = y;
-            else
-                index--;
-            lastAccessed = null;
-        }
-
-        // add element to list
-        public void add(Item item) {
-            Node x = current.prev;
-            Node y = new Node();
-            Node z = current;
-            y.item = item;
-            x.next = y;
-            y.next = z;
-            z.prev = y;
-            y.prev = x;
-            n++;
-            index++;
-            lastAccessed = null;
         }
     }
 
@@ -276,11 +213,15 @@ public class DoubleNode<Item> implements Iterable<Item> {
         testList.insertAfter(testList.pre.next,5); // 7<->6<->insert 5 <->1<->2
         // test insert before
         testList.insertBefore(testList.post.prev,0); // 7<->6<->5<->insert 0<->1<->2
+
+        // Error problems here ***********
+        // I have errors with the remove functions
         // test remove beginning
         testList.removeLeft(); // 6<->5<->0<->1<->2
         // test remove end
         testList.removeRight(); // 6<->5<->0<->1
         testList.removeItem(testList.pre.next); // 6<->0<->1
+        //Error problems end here***************
         testList.printDLL(testList.pre);
     }
 }
